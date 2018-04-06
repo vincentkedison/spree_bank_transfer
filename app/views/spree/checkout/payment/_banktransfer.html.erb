@@ -1,10 +1,6 @@
 <% if (banks = Spree::Bank.active).present? %>
+  <p>Please transfer to: </p>
   <table class="table index">
-    <tr>
-      <th><%= Spree.t(:bank_name) %></th>
-      <th><%= Spree.t(:account_no) %></th>
-      <th><%= Spree.t(:additional_details) %></th>
-    </tr>
     <% banks.each do |bank| %>
       <tr>
         <td><%= bank.name %></td>
