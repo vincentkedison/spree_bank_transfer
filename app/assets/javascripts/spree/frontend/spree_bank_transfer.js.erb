@@ -7,15 +7,6 @@ $(document).ready(function() {
     }
     return false;
   });
-  console.log('bt');
-  var options = $.extend(
-    {}, // empty object
-    $.datepicker.regional['<%= I18n.default_locale %>'], // I18n locale
-    {dateFormat: '<%= Spree.t(:js_format, scope: "date_picker", default: "yy/mm/dd") %>',
-     firstDay: '<%= Spree.t(:first_day, scope: "date_picker", default: "0") %>'}
-  );
-  $.datepicker.setDefaults(options);
-  $('[name="payment[deposited_on]"]').datepicker();
 
   $('.add_bt_details').on("click", function() {
     $(this).hide();
